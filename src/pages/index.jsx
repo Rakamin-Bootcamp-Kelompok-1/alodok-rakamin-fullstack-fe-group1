@@ -1,0 +1,14 @@
+export { default as AdminDashboard } from './Admin/Admin';
+export { default as AdminArticles } from './AdminArticles/AdminArticles';
+export { default as AdminArticlesDetail } from './AdminArticlesDetail/AdminArticlesDetail';
+export { default as Articles } from './articles/Articles';
+export { default as ArticleDetail } from './ArticleDetail/ArticleDetail';
+export { default as Doctors } from './Doctors/Doctors';
+export { default as DoctorDetails } from './DoctorDetails/DoctorDetails';
+export { default as Home } from './Home/Home';
+export { default as Login } from './Auth/Login';
+export { default as Register } from './Auth/Register';
+export { default as Verify } from './Auth/Verify';
+export { default as ForgotPassword } from './Auth/ForgotPassword';
+export { default as Profile } from './User/Profile';
+export { default as EditProfile } from './User/EditProfile';

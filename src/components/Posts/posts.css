@@ -1,0 +1,60 @@
+.container {
+  margin-top: 1000px;
+}
+
+.showcase {
+  width: 40%; /*image width*/
+  float: left; /*image position*/
+}
+
+.content {
+  box-sizing: border-box;
+  width: 40%;
+  float: right;
+  text-align: justify;
+}
+
+.searchbar {
+  height: 70px;
+  border-radius: 25px;
+  width: 80%;
+  justify-self: center;
+  padding: 20px;
+}
+
+.search_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.image_text_container {
+  display: flex;
+  flex-direction: row;
+  width: 120%;
+}
+
+.button-search {
+  width: 2%;
+  padding-left: 2%;
+}
+
+.article {
+  width: 80%;
+  text-align: justify;
+  margin-top: 100px;
+}
+
+.showcase_main {
+  background-position: left;
+  width: 60rem;
+  height: 30rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.showcase_header {
+  margin-top: 30px;
+}
