@@ -36,7 +36,7 @@ const Articles = () => {
   });
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(5);
+  const [postsPerPage] = useState(10);
   // const [productsFilter, setProductsFilter] = useState({
   //   filteredProducts: [],
   // });
