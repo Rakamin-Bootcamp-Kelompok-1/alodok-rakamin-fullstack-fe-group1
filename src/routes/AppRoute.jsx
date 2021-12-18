@@ -4,6 +4,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // NAVBAR
 import Layout from '../components/Layout';
 
+// Footer
+import Footer from '../components/Footer/Footer';
+
 // PAGES
 import {
   AdminDashboard,
@@ -43,6 +46,7 @@ const AppRoute = () => {
           <Route path="/profile/:email" component={Profile} />
           <Route path="/" component={Home} />
         </Switch>
+        <Footer />
       </Layout>
     </BrowserRouter>
   );

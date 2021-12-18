@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Container } from '@material-ui/core';
+import './posts.css';
 
 const Posts = ({ posts, loading }) => {
   if (loading) {
@@ -9,20 +10,20 @@ const Posts = ({ posts, loading }) => {
 
   return (
     <Container>
-      <Card
-        className="list-group d-flex justify-content-center"
-        style={{ margin: '20px' }}
+      <div
+        className="list-group d-flex justify-content-center mb-4"
+        style={{ marginBottom: '10%' }}
       >
         {posts.map((post) => (
-          <Link
-            to={`/articledetail/${post.id}`}
-            style={{ textDecoration: 'none', color: 'inherit' }}
-          >
-            <div className="">
+          <div className="mb-4">
+            <Link
+              to={`/articledetail/${post.id}`}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
               <div className="">
-                <div className="showcase-header">
-                  <h3>{post.article_title}</h3>
-                </div>
+                {/* <div className="showcase-header">
+                    <h3>{post.article_title}</h3>
+                  </div> */}
                 <div className="image_text_container">
                   <div className="showcase">
                     <img
@@ -31,7 +32,10 @@ const Posts = ({ posts, loading }) => {
                       style={{ width: '300px', height: '200px' }}
                     />
                   </div>
-                  <div className="content">
+                  <div className="content_container">
+                    <div className="showcase-header">
+                      <h3>{post.article_title}</h3>
+                    </div>
                     <h6>
                       <b>{post.article_category}</b>
                     </h6>
@@ -39,10 +43,10 @@ const Posts = ({ posts, loading }) => {
                   </div>
                 </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
         ))}
-      </Card>
+      </div>
     </Container>
   );
 };

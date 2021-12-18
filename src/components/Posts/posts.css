@@ -7,11 +7,13 @@
   float: left; /*image position*/
 }
 
-.content {
+.content_container {
   box-sizing: border-box;
-  width: 40%;
+  width: 50%;
   float: right;
   text-align: justify;
+  overflow: hidden;
+  height: 300px;
 }
 
 .searchbar {
