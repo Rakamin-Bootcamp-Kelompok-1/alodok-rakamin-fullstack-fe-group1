@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Axios from 'axios';
-import { Button, Box, Card, TextField } from '@material-ui/core';
+import { Button, Box, Card, TextField, Container } from '@material-ui/core';
 import { Link, Redirect } from 'react-router-dom';
 import { API } from '../../helper';
 
@@ -49,16 +49,26 @@ function EditProfile() {
   }
 
   return (
-    <Card className="container">
-      <div className="">
-        <div className="m-5">
-          <div className="">
-            <div className="">
-              <h2>Edit Profile</h2>
+    <Container>
+      <Card className="m-5">
+        <div>
+          <div className="m-2">
+            <h2>Edit Profile</h2>
+            <hr />
+          </div>
+          <div className="d-flex flex-row">
+            <div className="m-4">
+              <img
+                id="imgpreview"
+                src={userGlobal.image_data}
+                alt=""
+                width="150px"
+                style={{ borderRadius: '50%' }}
+              />
             </div>
             <div className="modal-body">
               <div>
-                <label htmlFor="editUserFullname" className="text-xl-left m-2">
+                <label htmlFor="editUserFullname" className="text-xl-left mb-2">
                   Full Name
                 </label>
                 <TextField
@@ -72,8 +82,9 @@ function EditProfile() {
                   className="form-control"
                 />
               </div>
+              <br />
               <div>
-                <label htmlFor="editUserEmail" className="text-xl-left m-2">
+                <label htmlFor="editUserEmail" className="text-xl-left mb-2">
                   Email
                 </label>
                 <TextField
@@ -87,8 +98,9 @@ function EditProfile() {
                   className="form-control"
                 />
               </div>
+              <br />
               <div>
-                <label htmlFor="editUserEmail" className="text-xl-left m-2">
+                <label htmlFor="editUserEmail" className="text-xl-left mb-2">
                   Birth Date
                 </label>
                 <TextField
@@ -102,10 +114,11 @@ function EditProfile() {
                   className="form-control"
                 />
               </div>
+              <br />
               <div>
                 <label
                   htmlFor="editUserPhoneNumber"
-                  className="text-xl-left m-2"
+                  className="text-xl-left mb-2"
                 >
                   Phone Number
                 </label>
@@ -120,8 +133,9 @@ function EditProfile() {
                   className="form-control"
                 />
               </div>
+              <br />
               <div>
-                <label htmlFor="editUserGender" className="text-xl-left m-2">
+                <label htmlFor="editUserGender" className="text-xl-left mb-2">
                   Gender
                 </label>
                 <select
@@ -136,8 +150,9 @@ function EditProfile() {
                   <option value="Men">Men</option>
                 </select>
               </div>
+              <br />
               <div>
-                <label htmlFor="editUserAge" className="text-xl-left m-2">
+                <label htmlFor="editUserAge" className="text-xl-left mb-2">
                   Age
                 </label>
                 <TextField
@@ -152,39 +167,26 @@ function EditProfile() {
                 />
               </div>
               <br />
-              <div>
-                <div>
-                  <img
-                    id="imgpreview"
-                    src={userGlobal.image_data}
-                    alt=""
-                    width="150px"
-                    style={{ borderRadius: '50%' }}
-                  />
-                </div>
-                <label htmlFor="img_profile" className="text-xl-left m-2">
-                  Add image
-                </label>
-              </div>
-            </div>
-            <div className="modal-footer">
-              <Box type="button" onClick={saveBtnHandler}>
-                <Button variant="contained" color="primary">
-                  Save
-                </Button>
-              </Box>
-              <Box
-                component={Link}
-                to={`/profile/${userGlobal.email}`}
-                sx={{ textDecoration: 'none' }}
-              >
-                <Button variant="contained">Back</Button>
-              </Box>
+              <div></div>
             </div>
           </div>
+          <div className="modal-footer">
+            <Box type="button" onClick={saveBtnHandler}>
+              <Button variant="contained" color="primary">
+                Save
+              </Button>
+            </Box>
+            <Box
+              component={Link}
+              to={`/profile/${userGlobal.email}`}
+              sx={{ textDecoration: 'none' }}
+            >
+              <Button variant="contained">Back</Button>
+            </Box>
+          </div>
         </div>
-      </div>
-    </Card>
+      </Card>
+    </Container>
   );
 }
 
