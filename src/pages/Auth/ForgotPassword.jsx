@@ -37,7 +37,9 @@ function ForgotPassword() {
         email: emailText.emailInput,
       })
       .then((mess) => {
-        <p>{mess.message}</p>;
+        alert(
+          `Forgot Password email has been sent to ${emailText.emailInput}. Please kindly open to proceed.`
+        );
       })
       .catch((err) => {
         console.log(err);
