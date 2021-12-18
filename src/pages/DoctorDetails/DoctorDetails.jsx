@@ -31,7 +31,7 @@ const DoctorDetail = (props) => {
                   orientation="vertical"
                   style={{ color: 'black', height: '20px' }}
                 />
-                <div className="content">
+                <div className="">
                   <p>
                     <b>Day:</b>
                   </p>

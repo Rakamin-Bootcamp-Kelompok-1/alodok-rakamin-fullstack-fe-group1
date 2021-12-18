@@ -50,7 +50,7 @@ function EditProfile() {
 
   return (
     <Container>
-      <Card className="m-5">
+      <div className="m-5">
         <div>
           <div className="m-2">
             <h2>Edit Profile</h2>
@@ -185,7 +185,7 @@ function EditProfile() {
             </Box>
           </div>
         </div>
-      </Card>
+      </div>
     </Container>
   );
 }
